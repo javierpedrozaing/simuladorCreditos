@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simulador de Creditos</title>
+
+	<link rel="stylesheet" href="/style.css">
+  	<script type="text/javascript">
+
+  	$(document).on("ready",  function(){
+            meses = new Array();           
+            meses[1] = new Array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'
+            ,'21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'
+            ,'41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60');
+            meses[2] = new Array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'
+            ,'21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36');
+            meses[3] = new Array('1','2','3','4','5','6','7','8','9','10');
+            meses[4] = new Array('1','2','3','4','5');
+            meses[5] = new Array('1','2','3','4','5','6');
+            meses[6] = new Array('1','2','3','4');
+            function cambiar(formulario){	
+
+            $('select#creditos').on('change',function(){
+                var i=0;
+			    window.valor = $(this).val();
+			    window.credito = meses[valor];
+			    window.mes = $('#meses');
+			    if(credito.length)
+			    	mes.length = credito.length;
+			    	
+
+			    while(window.credito[i]){
+		            mes.options[i].value = window.credito[i];
+		            mes.options[i].text = window.credito[i];
+		         i++;
+		        } 
+			});	
+            }	
+   	});
+  	</script>
+
+</head>
+<body>
+	<div id="principal" align="center">
+		<%= form_tag('/', :multipart => true ) do %>
+				   <center><p STYLE="color: green; font-size: 18px;"><strong>EL CRÉDITO ORDINARIO ES CON UNA CUOTA FIJA, LOS DEMÁS CRÉDITOS PUEDEN SER CON CUOTA FIJA O VARIABLE</strong></p></center>
+               
+                               
+                <div id="tabla_titulo">                                    
+                    <h1>Simulador de Crédito</h1>
+                    <div id="div-primera-seccion">
+                        <div id="div-tipo-credito">
+                            <h2 id="titulo-tipo-credito">Tipo de Credito: </h2>
+
+                               <select name="credito" id="creditos" onchange="cambiar(this.form)>
+                                <% @creditos.each do |credito| %>
+
+                                  <option value="<%= credito.id %>"><%= credito.nombre%></option>                                
+                                <% end %>
+                              </select> 
+                                
+                                                                                                              
+                        </div>
+                        <div id="div-valor-credito">
+
+                            <h2 id="titulo-valor-credito">Valor del credito: </h2> 
+                            <%= text_field_tag 'valorCredito' %>
+                            
+                        </div>                    
+                        <div id="div-fecha-inicio">
+                            <h2 id="titulo-fecha-inicio">Fecha de inicio: </h2>                              
+                            <%= date_field_tag 'fecha', Time.now %>
+                        </div>                            
+                        <div id="div-cuota">
+                            <h2 id="titulo-cuota" >Cuota: </h2>                       
+                                <select  name="cuota" id="seleccion-cuota">
+                                
+                                      <option value="1" >fija</option>                                  
+                                      <option value="2" >variable</option>                                                         
+                                
+                                </select>
+                            
+                        </div>
+                    </div>                  
+                        <div id="div-segunda-seccion">
+                            <div id="div-titulo-cuantos-meses">
+                                 <h2 id="titulo-cuantos-meses">¿A cuantos meses?: </h2>
+                                 <span>
+                                <select name="selectMes" id="meses">                                 
+                                    <option value=""> </option>
+                                 
+                                </select>
+                                </span>
+                            </div>
+                         
+                        </div>    
+                                              
+                            
+                    <div id="div-boton-calcular">
+                     
+                        <table>    
+                            
+                            <tr>
+                                <td style="font-size:20px; text-align: center; color:#cc0000;">Valor Cuota: </td>
+                                
+                            </tr>
+                              <tr>
+                                  <td style="font-size:20px; text-align: center; color:#cc0000 ;">Número de cuotas: </td> 
+                              </tr>
+                        </table>
+                        
+                        
+                    </div>                            
+                 </div>  
+
+                 <%= submit_tag 'Consultar', :class=>"btn"%>  
+		<% end %>
+			
+
+
+                <div id="div-resultado">
+                    <table border="1">
+                        <tr>
+                            <td>
+                                <h4 >No. Cuota</h4>
+                            </td>
+                            <td>
+                                <h4 >Saldo Cap.</h4>
+                            </td>
+                            <td>
+                                <h4 >Abono Cap.</h4>
+                            </td>
+                            <td>
+                                <h4 >Interes mes</h4>
+                            </td>
+                            <td>
+                                <h4 >Cuota mes</h4>
+                            </td>
+                            <td>
+                                <h4 >Fecha de pago</h4>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <%= @idCredito %>
+                            </td>
+                            <td>
+                                <%= @valorCredito %>
+                            </td>
+                            <td>
+                                <%=  @abonoCapital %>
+                            </td>
+                            <td>
+                              
+                            </td>
+                            <td>
+                                  <%= @mes %>
+                            </td>
+                            <td>
+                                <%= @fecha %>
+                            </td>
+                        </tr>                                                            
+                
+                   <tr>
+                       <td>
+                           <%= @interes %>
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                   </tr>
+                   </table>
+                 </div>
+                           
+	</div>
+</body>
+</html>

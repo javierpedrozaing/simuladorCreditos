@@ -1,0 +1,25 @@
+<%= form_for(@tasas_de_interese) do |f| %>
+  <% if @tasas_de_interese.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tasas_de_interese.errors.count, "error") %> prohibited this tasas_de_interese from being saved:</h2>
+
+      <ul>
+      <% @tasas_de_interese.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :interes %><br>
+    <%= f.text_field :interes %>
+  </div>
+  <div class="field">
+    <%= f.label :meses %><br>
+    <%= f.number_field :meses %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

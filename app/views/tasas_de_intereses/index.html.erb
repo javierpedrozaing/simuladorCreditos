@@ -1,0 +1,27 @@
+<h1>Listing tasas_de_intereses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Interes</th>
+      <th>Meses</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasas_de_intereses.each do |tasas_de_interese| %>
+      <tr>
+        <td><%= tasas_de_interese.interes %></td>
+        <td><%= tasas_de_interese.meses %></td>
+        <td><%= link_to 'Show', tasas_de_interese %></td>
+        <td><%= link_to 'Edit', edit_tasas_de_interese_path(tasas_de_interese) %></td>
+        <td><%= link_to 'Destroy', tasas_de_interese, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tasas de interese', new_tasas_de_interese_path %>

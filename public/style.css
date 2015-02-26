@@ -1,0 +1,709 @@
+/* 
+    Document   : Style
+    Created on : 10-jul-2012, 8:26:38
+    Author     : UNAD
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body
+{        
+  padding: 0; 
+  margin:0;
+  color: #000000;
+  height:100%;
+  min-height:100%;
+  background-color:  gainsboro;
+  /*background-image: url('/administracionBD/imagenes/fondo_inicio.jpg');*/
+  background-repeat: repeat-y;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: top center;
+  /*width: 100%;*/
+  min-width: 800px; 
+}
+
+#principal
+{
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  left: 0;
+  /*margin: 0px 0 0 -611px;*/
+  top: 0;
+  cursor:default;
+  overflow:visible;
+  float: left;
+  clear: left;
+  background-color: gainsboro;
+  
+  /*background-position: top center;*/
+}
+
+#inicio{
+    margin-top: 80px;    
+    left: 500px;
+    width: 500px; 
+    background-color: white;        
+}
+
+#tabla_titulo{
+    margin: 5px 0 0 0px;
+    left: 100px;
+    width: 695px;
+    background-color: white;
+    border: solid  coral;
+}
+
+#tabla{ 
+    margin: 0px 0 0 0px;
+    left: 100px;
+    width: 490px;  
+}
+
+#imagen_fondo_cuadro{
+    margin: 0px 0 0 0px;
+    left: 300px;
+    width: 500px;
+    border: 1.5px solid orange;
+}
+
+#div-valor-credito{
+    margin: 0px 0 0 -400px;
+    height: 60px;
+    width: 220px;
+    border: 0px solid deepskyblue;
+}
+
+#titulo-valor-credito{
+    margin: 0px 0 0 -15px;    
+}
+
+#caja-valor-credito{
+    margin:  0px 0 0 0px;
+    width: 200px;
+}
+
+#div-fecha-inicio{
+    margin: -62px 0 0 50px;
+    height: 60px;
+    width: 220px;
+    border: 0px solid deepskyblue;
+}
+
+#titulo-fecha-inicio{
+    margin: 0px 0 0 -25px;    
+}
+
+#caja-fecha-inicio{
+    margin:  0px 0 0 0px;
+    width: 200px;
+}
+
+#div-cuota{
+    margin: -62px 0 0 400px;
+    height: 60px;
+    width: 120px;
+    border: 0px solid deepskyblue;
+}
+
+#titulo-cuota{
+    margin: 0px 0 0 -20px;    
+}
+
+#seleccion-cuota{
+    margin:  0px 0 0 -10px;
+    width: 100px;
+}
+
+#div-con-seguro{
+    margin: -63px 0 0 0px;
+    height: 60px;
+    width: 170px;
+    border: 0px solid deepskyblue;
+}
+
+#titulo-con-seguro{
+    margin: 0px 0 0 -40px;
+}
+
+#seleccion-seguro{
+    margin:  0px 0 0 -10px;
+    width: 150px;
+}
+
+#div-titulo-cuantos-meses{
+    margin: 5px 0 0 0px;
+    height: 60px;
+    width: 220px;
+    border: 0px solid deepskyblue; 
+}
+
+#titulo-cuantos-meses{
+    margin: 0px 0 0 -5px;
+}
+
+#seleccion-meses{
+    margin:  0px 0 0 0px;
+    width: 210px;
+}
+
+#div-valor-seguro{
+    margin: -63px 0 0 400px;
+    height: 60px;
+    width: 220px;
+    border: 0px solid deepskyblue; 
+}
+
+#titulo-valor-seguro{
+    margin: 0px 0 0 -50px;
+}
+
+#caja-valor-seguro{
+    margin:  0px 0 0 0px;
+    width: 200px;
+}
+
+#div-boton-calcular{
+    margin:  20px 0 0 0px;    
+}
+
+#boton-calcular{
+    width: 200px;
+}
+
+#div-resultado{
+    margin: 5px 0 0 0px;
+    height: 380px;
+    width: 1000px; 
+    background-color: white;
+     border: solid  coral;
+    overflow: auto;
+}
+
+#obligatorio{
+    color: red;
+}
+
+#div-primera-seccion{
+    margin: 20px 0 0 0px;
+    /*border: 1px solid cornflowerblue;*/
+}
+
+#div-segunda-seccion{
+    /*border: 1px solid darkseagreen;*/
+}
+
+#div-tipo-credito{
+    margin: 0px 0 0 0px;
+    height: 60px;
+    width: 200px;
+    border: 0px solid deepskyblue;
+}
+
+#titulo-tipo-credito{
+    margin: 0px 0 0 0px;
+}
+
+#seleccion-tipo-credito{
+    margin: 0px 0 0 0px;
+}
+
+/*menu horizontal*/
+
+#menu{    
+    margin: 30px 0 0 380px !important;
+    height: 26px;
+    width: 1000px;
+    font-family: Arial;
+    font-size: 0.8em;
+    padding: 0;   
+    /*background-color: black;*/
+    /* border: 1.5px solid orange;*/
+    
+}
+
+#menu li {
+	/* Indicamos que la posición de 'li' sea adjunte siempre a la izquierda */
+	float: left;
+	/* Eliminamos las marcas que genera el li como pueden ser las redonadas o recuadros */
+	list-style-type: none;
+}
+
+/* Por defecto ul genera una separación hacia la derecha. con margin:0 queda anulada */
+#menu ul {
+	margin: 0;
+	padding: 5px;
+}
+
+#menu a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	background: black;
+	padding: 3px 15px 3px 15px;
+	text-align: center;
+        font-size: 18px;
+	border: 1px solid white;
+	/* Pintamos las lineas de todos los lados, excepto el izquierdo */
+	border-width: 1px 1px 1px 0;
+}
+
+/* El primer recuadro, no tiene la linea izquierda. Aqui se la colocamos */
+#menu a#primero {
+	border: 1px solid white;
+}
+
+#menu a:hover {
+	background: #d6ccff;
+}
+
+/*fin menu horizontal*/
+
+/*menu horizontal*/
+
+#menu1{    
+    margin: 30px 0 0 130px !important;
+    height: 26px;
+    width: 1000px;
+    font-family: Arial;
+    font-size: 0.8em;
+    padding: 0;   
+    /*background-color: black;*/
+    /* border: 1.5px solid orange;*/
+    
+}
+
+#menu1 li {
+	/* Indicamos que la posición de 'li' sea adjunte siempre a la izquierda */
+	float: left;
+	/* Eliminamos las marcas que genera el li como pueden ser las redonadas o recuadros */
+	list-style-type: none;
+}
+
+/* Por defecto ul genera una separación hacia la derecha. con margin:0 queda anulada */
+#menu1 ul {
+	margin: 0;
+	padding: 5px;
+}
+
+#menu1 a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	background: black;
+	padding: 3px 15px 3px 15px;
+	text-align: center;
+        font-size: 18px;
+	border: 1px solid white;
+	/* Pintamos las lineas de todos los lados, excepto el izquierdo */
+	border-width: 1px 1px 1px 0;
+}
+
+/* El primer recuadro, no tiene la linea izquierda. Aqui se la colocamos */
+#menu1 a#primero {
+	border: 1px solid white;
+}
+
+#menu1 a:hover {
+	background: #d6ccff;
+}
+
+/*fin menu horizontal*/
+
+#informacion-del-usuario{
+ margin: 0px 0 0 750px;
+ font-family: Arial;
+ font-size: 14px;
+ /*border: 1px solid yellow;*/
+ 
+}
+
+#usuario-activo{
+    margin: 0px 0 0 0px;
+    /*border: 1px solid red;*/
+}
+
+#cerrar-sesion{
+    margin: 5px 0 0 0px;
+    /*border: 1px solid red;*/
+}
+
+a{
+    text-decoration: none;
+}
+
+/*para la paguina usuarios*/
+
+#inicio{
+    margin: 0px auto 0px;
+    margin-top: 100px;    
+    left: 500px;
+    width: 500px; 
+    background-color: white;
+    border: 1px solid gold;
+}
+
+/*#tabla_titulo{
+    margin: 0px 0 0 0px;
+    left: 100px;
+    width: 495px;
+    /*border: solid red;*/
+/*}*/
+
+#tabla{ 
+    margin: 0px 0 0 0px;
+    left: 100px;
+    width: 490px;  
+}
+
+#tabla-reguistro{
+    margin: 5px 0 0 0px;
+    left: 100px;
+    width: 495px;
+    /*border: solid red;*/
+}
+
+#div-tabla-de-inscritos{
+    left: 300px;
+    width: 600px;
+    overflow: auto;
+    border: 1px solid greenyellow;
+}
+
+#tabla-de-inscritos{
+    left: 300px;
+    width: 600px;
+}
+
+/*para la paguina usuarios*/
+
+#titulo-paguina-usuarios{
+    margin: 0px 0 0 289px;
+    color: #000000;
+}
+
+#titulo-paguina-clientes{
+    margin: 0px 0 0 400px;
+    color: #000000;
+}
+
+#titulo-nuevo-usuario{
+    margin: 0px 0 0 190px;
+    color: #000000;
+}
+
+#titulo-modificar-usuario{
+    margin: 0px 0 0 220px;
+    color: #000000;
+}
+
+#titulo-eliminar-usuario{
+    margin: 0px 0 0 230px;
+    color: #000000;
+}
+
+#titulos-tabla-usuarios{
+    
+    font-family: lucida sans;
+    font-size: 16px;
+   
+}
+
+#tabla-de-usuarios{
+    margin: 10px 0 0 0px; 
+    background-color: white; 
+    border: 2px solid yellowgreen;    
+    width: 700px;
+}
+
+.tablaclientes td{border: 1px solid yellowgreen;}
+
+#tabla-de-clientes{
+    margin: 10px 0 0 20px; 
+    background-color: white; 
+    border: 2px solid yellowgreen;    
+    width: 700px;
+}
+
+
+#boton-nuevo-usuario{
+    margin: -393px 0 3px 978px;
+    width: 120px;
+    height: 23px;   
+    background-color: orange;    
+    border: inset 2px white; 
+    border-right: 2px solid brown;
+    border-bottom: 2px solid brown;
+    /*border: 1px solid yellow;*/
+}
+
+#boton-usuario{
+    /*margin: 0px 0 0 5px;*/
+    width: 110px;  
+    padding-top: 3px;
+    padding-left: 34px ;
+    border-width: 2px;
+    /*border: 1px solid blue;*/
+}
+
+#vinculo-usuario-nuevo{
+    border-width: 2px;      
+    font-family: arial; 
+    font-weight: bold;    
+    font-size: 15px;
+    color: black;
+}
+
+#boton-volver-usuario{
+    margin: 22px 0 0 976px;
+    width: 120px;
+    height: 23px;   
+    background-color: orange;    
+    border: inset 2px white; 
+    border-right: 2px solid brown;
+    border-bottom: 2px solid brown;
+    /*border: 1px solid yellow;*/
+}
+
+#boton-volver{
+    /*margin: 20px 0 0 790px;*/
+    width: 110px;  
+    padding-top: 3px;
+    padding-left:35px ;
+    border-width: 2px;
+}
+
+#vinculo-volver-usuario{
+    border-width: 2px;      
+    font-family: arial; 
+    font-weight: bold;    
+    font-size: 15px;
+    color: black;
+}
+
+#boton-nuevo-cliente{
+    margin: 20px 0 0 370px;
+    width: 120px;
+    height: 23px;   
+    background-color: orange;    
+    border: inset 2px white; 
+    border-right: 2px solid brown;
+    border-bottom: 2px solid brown;
+    /*border: 1px solid yellow;*/
+}
+
+#boton-cliente{
+    /*margin: 0px 0 0 5px;*/
+    width: 110px;  
+    padding-top: 3px;
+    padding-left:6px ;
+    border-width: 2px;
+    /*border: 1px solid blue;*/
+}
+
+#vinculo-cliente-nuevo{
+    border-width: 2px;      
+    font-family: arial; 
+    font-weight: bold;    
+    font-size: 15px;
+    color: black;
+}
+
+#boton-volver-cliente{
+    margin: -27px 0 0 520px;
+    width: 120px;
+    height: 23px;   
+    background-color: orange;    
+    border: inset 2px white; 
+    border-right: 2px solid brown;
+    border-bottom: 2px solid brown;
+    /*border: 1px solid yellow;*/
+}
+
+#boton-cliente-volver{
+    /*margin: 20px 0 0 790px;*/
+    width: 110px;  
+    padding-top: 3px;
+    padding-left:35px ;
+    border-width: 2px;
+}
+
+#vinculo-volver-cliente{
+    border-width: 2px;      
+    font-family: arial; 
+    font-weight: bold;    
+    font-size: 15px;
+    color: black;
+}
+
+#boton-vol{
+    width: 122px; 
+    background-color: orange;     
+    border-color: orangered; 
+    font-family: arial; 
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+
+#div-tabla{
+    margin: 10px 0 0 251px; 
+    width: 700px;
+    height: 500px;
+    border: 1px solid blueviolet;
+    overflow: auto;   
+}
+
+#div-tabla-clientes{
+    margin: 10px 0 0 17px; 
+    width: 985px;
+    height: 550px;
+    border: 1px solid goldenrod;
+    overflow: auto;   
+}
+
+#div-modificar-eliminar{
+    margin: 10px auto 0px; 
+    width: 400px;
+    height: 300px;
+    border: 1px solid blueviolet;
+    overflow: auto;
+    /*background-color: white;*/
+    background-image: url('/Generacioncertificados/imagenes/ingrese nuevo usuario.png');
+    
+}
+
+#titulo-modificar-eliminar-usuarios{    
+    margin: 0px 0 0 5px;
+    font-family: lucida sans;
+    font-size: 16px;
+}
+
+#caja-texto-usuario{
+    margin: 10px 0 0 5px;
+    width: 180px;
+}
+
+#titulo-modificar-eliminar-nombre{
+    margin: -50px 0 0 200px;
+    font-family: lucida sans;
+    font-size: 16px;
+}
+
+#caja-texto-nombre{
+    margin: 9px 0 0 200px;
+    width: 180px;
+}
+
+#titulo-modificar-eliminar-tipo{
+    margin: 20px 0 0 5px;
+    font-family: lucida sans;
+    font-size: 16px;
+}
+
+#caja-texto-tipo{
+    margin: 9px 0 0 5px;
+    width: 186px;
+    height: 22px;
+}
+
+#caja-texto-tasainteres{
+    margin: 9px 0 0 5px;
+    width: 186px;
+    height: 22px;
+}
+
+#caja-texto-tipo-eliminar{
+    margin: 9px 0 0 5px;
+    width: 180px;    
+}
+
+#titulo-modificar-eliminar-password{
+    margin: -50px 0 0 200px;
+    font-family: lucida sans;
+    font-size: 16px;
+}
+
+#caja-texto-password{
+    margin: 9px 0 0 200px;
+    width: 180px;
+}
+
+#boton-modificar-usuario{
+   margin: 40px 0 0 60px;
+}
+
+#boton-modificar-eliminar{
+    width: 120px; 
+    background-color: orange;     
+    border-color: orangered;
+    font-family: arial; 
+    font-weight: bold;    
+    font-size: 15px;
+    color: black;
+}
+
+#botones-de-eliminar{
+     margin: 0px 0 0 0px;
+     margin-top: 0px;
+     height: 30px;
+     border: 1px solid blue;
+}
+
+#boton-modificar-volver{
+     margin: -24px 0 0 200px;
+}
+
+#mensaje-eliminar{
+    margin: 40px 0 0 0px;
+}
+
+/*para la pagina tipo usuario*/
+#titulo-paguina-tipo-usuarios{
+    margin: 0px 0 0 230px;
+    color: #000000;
+}
+
+#titulo-modificar-tipo-usuario{
+    margin: 0px 0 0 170px;
+    color: #000000;
+}
+
+#titulo-eliminar-tipo-usuario{
+    margin: 0px 0 0 175px;
+    color: #000000;
+}
+
+#titulo-nuevo-tipo-usuario{
+    margin: 0px 0 0 130px;
+    color: #000000;
+}
+
+/*fin tipo usuario*/
+
+#pie-de-pagina{    
+    margin: 290px 0 0 350px;
+    height: 80px;
+    width: 498px;
+    /*border: 1px solid blue;*/
+    /*background-image: url('/simuladordecredito/imagenes/cpitvc.png');*/
+}
+
+#pie-de-pagina-2{    
+    margin: 350px 0 0 560px;
+    height: 80px;
+    width: 498px;
+    /*border: 1px solid blue;*/
+    /*background-image: url('/simuladordecredito/imagenes/cpitvc.png');*/
+}
